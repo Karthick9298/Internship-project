@@ -59,8 +59,6 @@ const fileSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// Index for fast code lookups
-fileSchema.index({ shareCode: 1 });
 // Index for owner queries
 fileSchema.index({ ownerId: 1, createdAt: -1 });
 // TTL-style index support (cleanup is manual via cron)

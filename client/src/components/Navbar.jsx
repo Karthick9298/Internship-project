@@ -26,7 +26,7 @@ const Navbar = () => {
           <div className="navbar-logo-icon">
             <Share2 size={18} />
           </div>
-          <span>CodeShare</span>
+          <span>FileShare</span>
         </Link>
 
         {/* Desktop nav */}
