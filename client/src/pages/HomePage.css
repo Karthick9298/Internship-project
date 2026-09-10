@@ -1,0 +1,273 @@
+.home-page { overflow: hidden; }
+
+/* --- Hero --- */
+.hero-section {
+  background: linear-gradient(135deg, #F0F4FF 0%, #FAFAFA 60%, #F5F3FF 100%);
+  padding: 80px 0 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(79,70,229,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-content { display: flex; flex-direction: column; gap: 20px; }
+
+.hero-badge { width: fit-content; font-size: 0.8rem; }
+
+.hero-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, var(--primary), #7C3AED);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 420px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+/* --- Mock Card --- */
+.hero-card { display: flex; justify-content: center; }
+
+.mock-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(79,70,229,0.12), 0 4px 16px rgba(0,0,0,0.06);
+  border: 1px solid var(--border);
+  width: 280px;
+  overflow: hidden;
+  transform: rotate(-1deg);
+  transition: transform 0.3s ease;
+}
+.mock-card:hover { transform: rotate(0deg) scale(1.02); }
+
+.mock-card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border);
+}
+
+.mock-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+}
+.mock-dot.red    { background: #FF5F56; }
+.mock-dot.yellow { background: #FFBD2E; }
+.mock-dot.green  { background: #27C93F; }
+
+.mock-title {
+  margin-left: 4px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.mock-body {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.mock-file-icon { font-size: 2.5rem; line-height: 1; }
+.mock-file-name { font-weight: 700; font-size: 0.9rem; color: var(--text-primary); }
+
+.mock-code-box {
+  background: var(--primary-bg);
+  border: 1.5px dashed var(--primary-light);
+  border-radius: 10px;
+  padding: 12px 20px;
+  width: 100%;
+  margin: 8px 0 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.mock-code {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 6px;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.mock-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+/* --- Sections --- */
+.section { padding: 80px 0; }
+.section-alt { background: #F9FAFB; }
+
+.section-header { margin-bottom: 48px; }
+.section-header h2 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+/* --- Steps --- */
+.steps-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+.step-item:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-primary);
+  transform: translateY(-2px);
+}
+
+.step-num {
+  width: 32px; height: 32px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.step-arrow { color: var(--text-muted); }
+
+/* --- Features grid --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.25s;
+  box-shadow: var(--shadow-sm);
+}
+.feature-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  width: 44px; height: 44px;
+  background: var(--primary-bg);
+  color: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card h3 { font-size: 1rem; font-weight: 700; }
+.feature-card p  { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; }
+
+/* --- CTA --- */
+.cta-section { padding: 60px 0; }
+.cta-box {
+  background: linear-gradient(135deg, var(--primary) 0%, #7C3AED 100%);
+  border-radius: var(--radius-xl);
+  padding: 60px;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  box-shadow: 0 20px 60px rgba(79,70,229,0.35);
+}
+.cta-box h2 { font-size: 2rem; font-weight: 800; color: #fff; }
+.cta-box .text-secondary { color: rgba(255,255,255,0.8); }
+.cta-box .btn-secondary {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+.cta-box .btn-secondary:hover { background: rgba(255,255,255,0.25); }
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .hero-section .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-content { align-items: center; }
+  .hero-badge { margin: 0 auto; }
+  .hero-desc { text-align: center; }
+  .hero-card { order: -1; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .hero-section { padding: 48px 0 56px; }
+  .features-grid { grid-template-columns: 1fr; }
+  .steps-row { flex-direction: column; }
+  .step-arrow { transform: rotate(90deg); }
+  .cta-box { padding: 36px 20px; }
+}
